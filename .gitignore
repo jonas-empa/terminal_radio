@@ -1,0 +1,32 @@
+# --- Virtual environments ---------------------------------------------------
+.venv/
+
+# --- Python artifacts -------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# --- Test / coverage caches -------------------------------------------------
+.pytest_cache/
+.coverage
+.mypy_cache/
+.ruff_cache/
+
+# --- Build artifacts (scripts/build-dist.sh) --------------------------------
+# dist/ holds the ~14 MB standalone binary: large and glibc-specific, so it
+# is distributed by copying it around — never committed to the repo.
+build/
+dist/
+# Stray spec from running pyinstaller manually in the repo root; the build
+# script writes its spec into build/ (already ignored), and a hand-written
+# spec under packaging/ stays tracked because this pattern is root-anchored.
+/*.spec
+
+# --- Local logs -------------------------------------------------------------
+# terminal-radio --debug normally writes to ~/.config/terminal-radio/,
+# but keep any stray logs out of the repo either way.
+*.log
+
+# --- OS junk ----------------------------------------------------------------
+.DS_Store
+Thumbs.db

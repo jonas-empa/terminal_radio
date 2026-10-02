@@ -1,0 +1,195 @@
+/* terminal-radio layout and theme */
+
+Screen {
+    background: #0d1117;
+}
+
+Header {
+    background: #16324f;
+    color: #e6edf3;
+}
+
+Footer {
+    background: #16324f;
+    color: #8b949e;
+}
+
+#layout {
+    height: 1fr;
+}
+
+/* ------------------------------------------------------------------ */
+/* Info pane (left): now playing + details                             */
+/* ------------------------------------------------------------------ */
+#info-pane {
+    width: 34;
+    min-width: 26;
+    padding: 1 1 1 1;
+    background: #10161f;
+    border-right: tall #2d3a4d;
+}
+
+#now-playing {
+    height: 7;
+    padding: 0 0 1 0;
+    background: #121826;
+    color: #e6edf3;
+}
+
+#detail {
+    height: 1fr;
+    padding: 1 0 0 0;
+    color: #c9d1d9;
+    overflow-y: auto;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sidebar (middle): brand + stations                                  */
+/* ------------------------------------------------------------------ */
+#sidebar {
+    width: 30;
+    min-width: 22;
+    padding: 1 1 1 1;
+    background: #0f141d;
+    border-right: tall #2d3a4d;
+}
+
+/* The separator brightens while the stations column has focus. */
+#sidebar:focus-within {
+    border-right: tall #248efb;
+}
+
+#brand {
+    width: 100%;
+    content-align: center middle;
+    height: 3;
+    color: #248efb;
+    text-style: bold;
+    background: #121b29;
+}
+
+#legend {
+    color: #8b949e;
+    padding: 0 0 1 0;
+    height: auto;
+}
+
+#stations {
+    height: 1fr;
+    background: #0d1117;
+}
+
+/* Inactive column (default): header and cursor are dimmed. */
+#stations .datatable--header {
+    background: #121826;
+    color: #56647a;
+    text-style: none;
+}
+
+#stations .datatable--cursor {
+    background: #172231;
+    color: #6b7686;
+    text-style: none;
+}
+
+/* Active column: bright header + bright cursor row, so it's unmistakable
+   at a glance which column you are navigating. */
+#stations:focus .datatable--header {
+    background: #16324f;
+    color: #7cc7ff;
+    text-style: bold;
+}
+
+#stations:focus .datatable--cursor {
+    background: #248efb;
+    color: #ffffff;
+    text-style: bold;
+}
+
+#stations .datatable--hover {
+    background: #1b2634;
+}
+
+/* ------------------------------------------------------------------ */
+/* Channel pane (right)                                                */
+/* ------------------------------------------------------------------ */
+#channel-pane {
+    width: 1fr;
+}
+
+#search {
+    margin: 1 1 1 1;
+    border: tall #2d3a4d;
+    background: #0d1117;
+}
+
+/* The search box glows while the channels column has focus. */
+#channel-pane:focus-within #search {
+    border: tall #248efb;
+}
+
+#channels {
+    height: 1fr;
+    background: #0d1117;
+}
+
+#channels .datatable--header {
+    background: #121826;
+    color: #56647a;
+    text-style: none;
+}
+
+#channels .datatable--cursor {
+    background: #172231;
+    color: #6b7686;
+    text-style: none;
+}
+
+#channels:focus .datatable--header {
+    background: #16324f;
+    color: #7cc7ff;
+    text-style: bold;
+}
+
+#channels:focus .datatable--cursor {
+    background: #248efb;
+    color: #ffffff;
+    text-style: bold;
+}
+
+#channels .datatable--hover {
+    background: #1b2634;
+}
+
+/* ------------------------------------------------------------------ */
+/* Status bar                                                          */
+/* ------------------------------------------------------------------ */
+#status-bar {
+    dock: bottom;
+    height: 1;
+    background: #141a26;
+    color: #8b949e;
+}
+
+/* ------------------------------------------------------------------ */
+/* Help screen                                                         */
+/* ------------------------------------------------------------------ */
+HelpScreen {
+    align: center middle;
+    background: #00000088;
+}
+
+#help-box {
+    width: 76;
+    max-width: 90%;
+    height: auto;
+    max-height: 90%;
+    padding: 1 2;
+    background: #10161f;
+    border: thick #248efb;
+}
+
+#help-body {
+    background: #10161f;
+    color: #c9d1d9;
+}
